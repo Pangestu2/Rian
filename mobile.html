@@ -6,50 +6,50 @@
 </head>
 <body>
   <h1>Kode Kivy PageLayout </h1>
-  <img src="mobile.png" alt="Contoh Tampilan Kivy PageLayout" width="500">
+  <img src="python3.13/pmobile/mobile.png" alt="Contoh Tampilan Kivy PageLayout" width="500">
   <pre>#pagelayout
 
-<h2>Mengimpor kelas App dari modul Kivy yang digunakan sebagai dasar aplikasi</h2>
-from kivy.app import App
+Mengimpor kelas App dari modul Kivy yang digunakan sebagai dasar aplikasi
+<h2>from kivy.app import App</h2>
 
-<h2>Mengimpor widget Button untuk membuat tombol di tampilan</h2>
-from kivy.uix.button import Button
+Mengimpor widget Button untuk membuat tombol di tampilan
+<h2>from kivy.uix.button import Button</h2>
 
-<h2>Mengimpor PageLayout, yaitu layout untuk membagi tampilan menjadi beberapa halaman yang bisa digeser (swipe)</h2>
-from kivy.uix.pagelayout import PageLayout
+Mengimpor PageLayout, yaitu layout untuk membagi tampilan menjadi beberapa halaman yang bisa digeser (swipe)
+<h2>from kivy.uix.pagelayout import PageLayout</h2>
 
-<h2>Mendefinisikan kelas MyApp yang merupakan turunan dari App</h2>
-class MyApp(App):
+Mendefinisikan kelas MyApp yang merupakan turunan dari App
+<h2>lass MyApp(App):</h2>
 
-    <h2>Fungsi build akan dijalankan pertama kali saat aplikasi dijalankan</h2>
-    def build(self):
+    Fungsi build akan dijalankan pertama kali saat aplikasi dijalankan
+    <h2>def build(self):</h2>
 
-        <h2>Membuat objek layout utama menggunakan PageLayout</h2>
-        p_layout = PageLayout()
+        Membuat objek layout utama menggunakan PageLayout
+        <h2>p_layout = PageLayout()</h2>
 
-        <h2>Membuat tombol pertama dengan teks "Rian" dan ukuran 20% dari lebar dan tinggi layar</h2>
-        btn1 = Button(text='Rian', size_hint=(0.2, 0.2))
+        Membuat tombol pertama dengan teks "Rian" dan ukuran 20% dari lebar dan tinggi layar
+        <h2>btn1 = Button(text='Rian', size_hint=(0.2, 0.2))</h2>
 
-        <h2>Membuat tombol kedua dengan teks "Pangestu" dan ukuran yang sama</h2>
-        btn2 = Button(text='Pangestu', size_hint=(0.2, 0.2))
+        Membuat tombol kedua dengan teks "Pangestu" dan ukuran yang sama
+        <h2>btn2 = Button(text='Pangestu', size_hint=(0.2, 0.2))</h2>
 
-        <h2>Membuat tombol ketiga dengan teks "Ganteng" dan ukuran yang sama</h2>
-        btn3 = Button(text='Ganteng', size_hint=(0.2, 0.2))
+        Membuat tombol ketiga dengan teks "Ganteng" dan ukuran yang sama
+        <h2>btn3 = Button(text='Ganteng', size_hint=(0.2, 0.2))</h2>
 
-        <h2>Menambahkan tombol pertama ke halaman pertama PageLayout</h2>
-        p_layout.add_widget(btn1)
+        Menambahkan tombol pertama ke halaman pertama PageLayout
+        <h2>p_layout.add_widget(btn1)</h2>
 
-        <h2>Menambahkan tombol kedua ke halaman kedua PageLayout</h2>
-        p_layout.add_widget(btn2)
+        Menambahkan tombol kedua ke halaman kedua PageLayout
+        <h2>p_layout.add_widget(btn2)</h2>
 
-        <h2>Menambahkan tombol ketiga ke halaman ketiga PageLayout</h2>
-        p_layout.add_widget(btn3)
+        Menambahkan tombol ketiga ke halaman ketiga PageLayout
+        <h2>p_layout.add_widget(btn3)</h2>
 
-        <h2>Mengembalikan layout sebagai tampilan utama aplikasi</h2>
-        return p_layout
+        Mengembalikan layout sebagai tampilan utama aplikasi
+        <h2>return p_layout</h2>
 
-<h2>Membuat instance dari MyApp dan menjalankan aplikasi</h2>
-MyApp().run()
+Membuat instance dari MyApp dan menjalankan aplikasi
+<h2>MyApp().run()</h2>
 </pre>
 </body>
 </html>
