@@ -1,11 +1,105 @@
-<!DOCTYPE html>
-<html lang="id" dir="ltr">
+!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+  <meta charset="UTF-8">
+  <title>Penjelasan Kode Kivy - PageLayout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    pre {
+      background-color: #f3f3f3;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    h3 {
+      color: #2c3e50;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1>Rian Pangestu</h1>
-    <h2>2211038</h2> 
+
+  <h1>Kode Kivy: Menggunakan PageLayout</h1>
+
+  <h3>1. Mengimpor Modul</h3>
+  <pre>
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.pagelayout import PageLayout
+  </pre>
+  <p>
+    - `App`: kelas utama aplikasi Kivy.<br>
+    - `Button`: widget untuk membuat tombol.<br>
+    - `PageLayout`: layout yang membagi tampilan menjadi beberapa halaman yang bisa digeser (swipe).
+  </p>
+
+  <h3>2. Membuat Kelas Aplikasi</h3>
+  <pre>
+class MyApp(App):
+  </pre>
+  <p>
+    Membuat kelas `MyApp` yang merupakan turunan dari `App`. Ini adalah kelas utama aplikasi yang akan dijalankan.
+  </p>
+
+  <h3>3. Fungsi build() - Membangun Tampilan</h3>
+  <pre>
+    def build(self):
+        p_layout = PageLayout()
+  </pre>
+  <p>
+    - `build(self)`: Fungsi yang akan dipanggil saat aplikasi dijalankan.<br>
+    - `p_layout`: objek `PageLayout` yang menjadi layout utama aplikasi.
+  </p>
+
+  <h3>4. Menambahkan Tombol ke Halaman PageLayout</h3>
+  <pre>
+        btn1 = Button(text='Rian', size_hint=(0.2, 0.2))
+        btn2 = Button(text='Pangestu', size_hint=(0.2, 0.2))
+        btn3 = Button(text='Ganteng', size_hint=(0.2, 0.2))
+  </pre>
+  <p>
+    - `Button(...)`: Membuat tombol dengan teks sesuai nama.<br>
+    - `size_hint=(0.2, 0.2)`: Menentukan ukuran tombol, 20% dari lebar dan tinggi layout.
+  </p>
+
+  <h3>5. Menambahkan Tombol ke dalam PageLayout</h3>
+  <pre>
+        p_layout.add_widget(btn1)
+        p_layout.add_widget(btn2)
+        p_layout.add_widget(btn3)
+  </pre>
+  <p>
+    - Setiap `add_widget(...)` menambahkan tombol ke halaman PageLayout.<br>
+    - Setiap tombol akan berada di halaman yang bisa digeser secara horizontal.
+  </p>
+
+  <h3>6. Mengembalikan Layout</h3>
+  <pre>
+        return p_layout
+  </pre>
+  <p>
+    Mengembalikan `p_layout` sebagai tampilan utama dari aplikasi.
+  </p>
+
+  <h3>7. Menjalankan Aplikasi</h3>
+  <pre>
+MyApp().run()
+  </pre>
+  <p>
+    - Membuat objek dari kelas `MyApp`.<br>
+    - Memanggil `run()` untuk menjalankan aplikasi.
+  </p>
+
+  <hr>
+  <h2>📱 Penjelasan Visual</h2>
+  <p>
+    - Aplikasi akan memiliki 3 halaman (swipe horizontal).<br>
+    - Setiap halaman berisi tombol berbeda: "Rian", "Pangestu", dan "Ganteng".<br>
+    - Gunakan **mouse drag atau gesture swipe** untuk berpindah halaman.
+  </p>
+
 </body>
 </html>
